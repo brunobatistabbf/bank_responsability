@@ -11,5 +11,5 @@ class TransactionHandler(ABC):
     @abstractmethod
     def handle(self, transaction):
         if self.next_handler:
-            return self.next_handler.handler(transaction)
+            return self.next_handler.handle(transaction)
             return None
